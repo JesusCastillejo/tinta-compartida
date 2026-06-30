@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Tinta Compartida</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="w-100 py-2 text-center text-white text-uppercase small font-monospace"
+        style="background-color: #0081A7;">
+        <span>🚚 Envío gratis para compras mayores a $25.000 pesos</span>
+    </div>
+
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container" aria-label="Menú principal">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/icon/icon.png" alt="Logo Tinta Compartida" class="me-2" style="width: 40px; height: auto;">
+                    <span class="fw-bold text-dark">Tinta Compartida</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
+                    aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse py-3 px-2" id="navbarPrincipal">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Tienda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Intercambio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="donaciones.html">Donaciones</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="club-lectura.html">Club de Lectura</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex me-3" role="search">
+                        <div class="input-group">
+                            <label for="buscarLibroNavbar" class="visually-hidden">Buscar libros</label>
+                            <input id="buscarLibroNavbar" name="buscarLibro" class="form-control" type="search"
+                                placeholder="Buscar libros..." aria-label="Buscar">
+                            <button class="btn text-white" type="submit" style="background-color: #0081A7;"><i
+                                    class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-3" style="color: #0081A7;"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end text-small" aria-labelledby="dropdownUser">
+                            <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+
+        <header class="cabecera-clubes mb-5 p-4 p-md-5 rounded shadow-sm text-white"
+            style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/image/Cclubdelecutra.jpeg') center/cover; ">
+            <div class="py-2">
+                <h1 class="display-5 fw-bold mb-2">Clubes de Lectura</h1>
+                <p class="lead mb-0">
+                    Compartí opiniones, debates y lecturas grupales con estudiantes de toda la comunidad universitaria.
+                    ¡Sumate a tu próximo libro!
+                </p>
+            </div>
+        </header>
+
+        <section class="mb-5" aria-label="Clubes más activos de la semana">
+            <div class="d-flex align-items-center mb-4">
+                <div class="decorador-titulo"></div>
+                <h2 class="h4 fw-bold mb-0">Más activos de la semana</h2>
+            </div>
+
+            <div id="carruselClubesActivos" class="carousel slide d-md-none" data-bs-ride="carousel"
+                data-bs-interval="8000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="tarjeta-activa-bg p-4 rounded shadow-sm text-white d-flex align-items-center"
+                            style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 129, 167, 0.8)), url('img/image/Cclub1.jpg'); background-size: cover; background-position: center; min-height: 180px;">
+                            <div>
+                                <h3 class="h5 fw-bold mb-1">Código de Páginas</h3>
+                                <p class="small opacity-90 mb-0">Lecturas de software y cultura tech.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="tarjeta-activa-bg p-4 rounded shadow-sm text-white d-flex align-items-center"
+                            style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 129, 167, 0.8)), url('img/image/Cclub2.jpg'); background-size: cover; background-position: center; min-height: 180px;">
+                            <div>
+                                <h3 class="h5 fw-bold mb-1">Ex Libris</h3>
+                                <p class="small opacity-90 mb-0">Análisis profundo de joyas literarias.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="tarjeta-activa-bg p-4 rounded shadow-sm text-white d-flex align-items-center"
+                            style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 129, 167, 0.8)), url('img/image/Cclub3.avif'); background-size: cover; background-position: center; min-height: 180px;">
+                            <div>
+                                <h3 class="h5 fw-bold mb-1">Fahrenheit 451</h3>
+                                <p class="small opacity-90 mb-0">Debatiendo distopías.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselClubesActivos"
+                    data-bs-slide="prev" style="width: 10%;">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselClubesActivos"
+                    data-bs-slide="next" style="width: 10%;">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <div class="row g-3 d-none d-md-flex">
+                <div class="col-md-4">
+                    <div class="tarjeta-activa-bg p-4 rounded shadow-sm text-white"
+                        style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 129, 167, 0.7)), url('img/image/Cclub1.jpg'); background-size: cover; background-position: center; min-height: 180px;">
+                        <h3 class="h5 fw-bold mb-1">Código de Páginas</h3>
+                        <p class="small opacity-90">Lecturas de software y cultura tech.</p>
+                        <span class="badge bg-danger text-uppercase font-monospace">¡En vivo!</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tarjeta-activa-bg p-4 rounded shadow-sm text-white"
+                        style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 129, 167, 0.7)), url('img/image/Cclub2.jpg'); background-size: cover; background-position: center; min-height: 180px;">
+                        <h3 class="h5 fw-bold mb-1">Ex Libris</h3>
+                        <p class="small opacity-90">Análisis profundo de joyas literarias.</p>
+                        <span class="badge bg-dark text-uppercase font-monospace">Este Miércoles</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tarjeta-activa-bg p-4 rounded shadow-sm text-white"
+                        style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 129, 167, 0.7)), url('img/image/Cclub3.avif'); background-size: cover; background-position: center; min-height: 180px;">
+                        <h3 class="h5 fw-bold mb-1">Fahrenheit 451</h3>
+                        <p class="small opacity-90">Debatiendo distopías.</p>
+                        <span class="badge bg-dark text-uppercase font-monospace">Nueva lectura</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5 opacity-25">
+
+        <section class="row g-4">
+
+            <aside class="col-12 col-md-3">
+                <button
+                    class="btn w-100 d-md-none mb-3 fw-semibold d-flex align-items-center justify-content-center gap-2 text-white"
+                    style="background-color: #00AFB9;" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#colapsoFiltrosMobile" aria-expanded="false" aria-controls="colapsoFiltrosMobile">
+                    <i class="bi bi-funnel-fill"></i> Mostrar / Ocultar Filtros
+                </button>
+
+                <div class="collapse d-md-block" id="colapsoFiltrosMobile">
+                    <div class="card p-3 border-0 shadow-sm text-white" style="background-color: #00AFB9;">
+                        <h3 class="h6 fw-bold mb-3 d-none d-md-block">
+                            <i class="bi bi-funnel-fill me-2"></i>Filtros Avanzados
+                        </h3>
+                        <form id="formFiltros">
+                            <div class="mb-2">
+                                <label for="selectIdioma" class="form-label small fw-semibold mb-1">Idioma</label>
+                                <select class="form-select form-select-sm" id="selectIdioma">
+                                    <option value="todos">Todos los idiomas</option>
+                                    <option value="espanol">Español</option>
+                                    <option value="ingles">Inglés</option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label for="selectCategoria" class="form-label small fw-semibold mb-1">Temática</label>
+                                <select class="form-select form-select-sm" id="selectCategoria">
+                                    <option value="todos">Todas las temáticas</option>
+                                    <option value="ficcion">Ficción</option>
+                                    <option value="terror">Misterio / Terror</option>
+                                    <option value="poesia">Poesía / Ensayos</option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label for="selectTipo" class="form-label small fw-semibold mb-1">Tipo de
+                                    Lectura</label>
+                                <select class="form-select form-select-sm" id="selectTipo">
+                                    <option value="todos">Todos los tipos</option>
+                                    <option value="literatura">Literatura General</option>
+                                    <option value="academica">Académica / Técnica</option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label for="selectModalidad" class="form-label small fw-semibold mb-1">Modalidad</label>
+                                <select class="form-select form-select-sm" id="selectModalidad">
+                                    <option value="todos">Todas las modalidades</option>
+                                    <option value="virtual">Virtual (Online)</option>
+                                    <option value="presencial">Presencial (Campus)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="selectEdad" class="form-label small fw-semibold mb-1">Perfil / Edad</label>
+                                <select class="form-select form-select-sm" id="selectEdad">
+                                    <option value="todos">Cualquier perfil</option>
+                                    <option value="adultos">Adultos / Avanzados</option>
+                                </select>
+                            </div>
+                            <button type="button" id="btnAplicarFiltros"
+                                class="btn btn-sm btn-light w-100 fw-semibold">Aplicar Filtros</button>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="col-12 col-md-9">
+                <div id="listaClubes">
+                    <div class="tarjeta-club-item mb-3 p-3 rounded text-white d-flex align-items-center"
+                        style="background-color: #F07167;" data-idioma="espanol" data-categoria="ficcion"
+                        data-tipo="literatura" data-modalidad="virtual" data-edad="adultos">
+                        <img src="img/image/Cclub4.jpg" alt="" class="rounded-circle me-3"
+                            style="width: 60px; height: 60px; object-fit: cover; background-color: #fff;">
+                        <div class="d-flex justify-content-between align-items-center flex-grow-1">
+                            <div>
+                                <h4 class="mb-1 text-white">Cronicas del Lacre</h4>
+                                <small class="text-white-50">Exploración de relatos históricos y realismo
+                                    mágico.</small>
+                            </div>
+                            <button class="btn text-white fw-bold" style="background-color: #0081A7;">Unirse al
+                                Club</button>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-club-item mb-3 p-3 rounded text-white d-flex align-items-center"
+                        style="background-color: #F07167;" data-idioma="espanol" data-categoria="terror"
+                        data-tipo="literatura" data-modalidad="virtual" data-edad="adultos">
+                        <img src="img/image/Cclub5.jpg" alt="" class="rounded-circle me-3"
+                            style="width: 60px; height: 60px; object-fit: cover; background-color: #fff;">
+                        <div class="d-flex justify-content-between align-items-center flex-grow-1">
+                            <div>
+                                <h4 class="mb-1 text-white">Tinta de Medianoche</h4>
+                                <small class="text-white-50">Lecturas de terror, suspenso y thrillers
+                                    psicológicos.</small>
+                            </div>
+                            <button class="btn text-white fw-bold" style="background-color: #0081A7;">Unirse al
+                                Club</button>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-club-item mb-3 p-3 rounded text-white d-flex align-items-center"
+                        style="background-color: #F07167;" data-idioma="espanol" data-categoria="ficcion"
+                        data-tipo="academica" data-modalidad="virtual" data-edad="adultos">
+                        <img src="img/image/Cclub6.jpg" alt="" class="rounded-circle me-3"
+                            style="width: 60px; height: 60px; object-fit: cover; background-color: #fff;">
+                        <div class="d-flex justify-content-between align-items-center flex-grow-1">
+                            <div>
+                                <h4 class="mb-1 text-white">El parrafo infinito</h4>
+                                <small class="text-white-50">Análisis literario avanzado para estudiantes
+                                    universitarios.</small>
+                            </div>
+                            <button class="btn text-white fw-bold" style="background-color: #0081A7;">Unirse al
+                                Club</button>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-club-item mb-3 p-3 rounded text-white d-flex align-items-center"
+                        style="background-color: #F07167;" data-idioma="espanol" data-categoria="ficcion"
+                        data-tipo="literatura" data-modalidad="virtual" data-edad="adultos">
+                        <img src="img/image/Cclub7.avif" alt="" class="rounded-circle me-3"
+                            style="width: 60px; height: 60px; object-fit: cover; background-color: #fff;">
+                        <div class="d-flex justify-content-between align-items-center flex-grow-1">
+                            <div>
+                                <h4 class="mb-1 text-white">Margen de papel</h4>
+                                <small class="text-white-50">Debates sobre novelas contemporáneas y autores
+                                    noveles.</small>
+                            </div>
+                            <button class="btn text-white fw-bold" style="background-color: #0081A7;">Unirse al
+                                Club</button>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-club-item mb-3 p-3 rounded text-white d-flex align-items-center"
+                        style="background-color: #F07167;" data-idioma="espanol" data-categoria="ficcion"
+                        data-tipo="literatura" data-modalidad="virtual" data-edad="adultos">
+                        <img src="img/image/Cclub8.avif" alt="" class="rounded-circle me-3"
+                            style="width: 60px; height: 60px; object-fit: cover; background-color: #fff;">
+                        <div class="d-flex justify-content-between align-items-center flex-grow-1">
+                            <div>
+                                <h4 class="mb-1 text-white">Cafe nocturno</h4>
+                                <small class="text-white-50">Poesía, café y tertulias en un ambiente relajado.</small>
+                            </div>
+                            <button class="btn text-white fw-bold" style="background-color: #0081A7;">Unirse al
+                                Club</button>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-club-item mb-3 p-3 rounded text-white d-flex align-items-center"
+                        style="background-color: #F07167;" data-idioma="espanol" data-categoria="terror"
+                        data-tipo="literatura" data-modalidad="virtual" data-edad="adultos">
+                        <img src="img/image/Cclub9.avif" alt="" class="rounded-circle me-3"
+                            style="width: 60px; height: 60px; object-fit: cover; background-color: #fff;">
+                        <div class="d-flex justify-content-between align-items-center flex-grow-1">
+                            <div>
+                                <h4 class="mb-1 text-white">Trazos fantasmas</h4>
+                                <small class="text-white-50">Historias de misterio y elementos sobrenaturales.</small>
+                            </div>
+                            <button class="btn text-white fw-bold" style="background-color: #0081A7;">Unirse al
+                                Club</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="alertaNoResultados" class="d-none alert alert-info">No se encontraron clubes con esos filtros.
+                </div>
+            </section>
+
+            <div id="alertaNoResultados" class="alert alert-warning mt-3 d-none text-center" role="alert">
+                <i class="bi bi-exclamation-circle me-2"></i> No se encontraron clubes que coincidan con la combinación
+                de filtros seleccionados.
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-white py-5">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                <div class="col-md-4">
+                        <h5 class="text-white mb-3 fw-bold d-flex align-items-center justify-content-center justify-content-md-start">
+                            <img src="img/icon/icon.png" alt="Logo Tinta Compartida" class="me-2" style="width: 30px; height: auto;">
+                        Tinta Compartida
+                        </h5>
+                    <p class="small text-white-50">Comunidad sustentable nacida en la UTN para promover la lectura
+                        circular.</p>
+                    <div class="fs-4 mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3 fw-bold">Información</h5>
+                    <ul class="list-unstyled small row row-cols-2 g-2">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Quiénes Somos</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Ayuda</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3 fw-bold">Novedades</h5>
+                    <p class="small text-white-50">Suscribite para recibir las últimas novedades.</p>
+                    <form class="input-group input-group-sm mt-3">
+                        <input type="email" class="form-control" placeholder="Tu email...">
+                        <button class="btn btn-light fw-bold text-dark" type="button">Unirme</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="text-center small opacity-50 mb-0">&copy; 2026 Tinta Compartida - UTN. Todos los derechos
+                reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

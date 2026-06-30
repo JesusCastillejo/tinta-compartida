@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones | Tinta Compartida</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="w-100 py-2 text-center text-white text-uppercase small font-monospace"
+        style="background-color: #0081A7;">
+        <span>🚚 Envío gratis para compras mayores a $25.000 pesos</span>
+    </div>
+
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container" aria-label="Menú principal">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/icon/icon.png" alt="Logo Tinta Compartida" class="me-2" style="width: 40px; height: auto;">
+                    <span class="fw-bold text-dark">Tinta Compartida</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
+                    aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse py-3 px-2" id="navbarPrincipal">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Tienda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Intercambio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="donaciones.html">Donaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="club-lectura.html">Club de Lectura</a></li>
+                    </ul>
+
+                    <form class="d-flex me-3" role="search">
+                        <div class="input-group">
+                            <label for="buscarLibroNavbar" class="visually-hidden">Buscar libros</label>
+                            <input id="buscarLibroNavbar" name="buscarLibro" class="form-control" type="search"
+                                placeholder="Buscar libros..." aria-label="Buscar">
+                            <button class="btn text-white" type="submit" style="background-color: #0081A7;"><i
+                                    class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-3" style="color: #0081A7;"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end text-small" aria-labelledby="dropdownUser">
+                            <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="py-5 text-center text-white mb-5"
+        style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/image/Ddonaciones.webp') center/cover;">
+        <div class="container py-3">
+            <h1 class="display-5 fw-bold text-white mb-2">Donaciones</h1>
+            <p class="lead mb-0 font-monospace fs-6 text-uppercase tracking-wider text-warning">Dona libros, compartí
+                historias.</p>
+        </div>
+    </div>
+
+    <main class="container py-2" style="max-width: 800px;">
+
+        <section class="card p-4 border-0 shadow-sm rounded mb-5 bg-white">
+            <h2 class="h4 fw-bold text-dark mb-3"><i class="bi bi-question-circle-fill me-2"
+                    style="color: #F07167;"></i>¿Cómo donar?</h2>
+            <p class="text-secondary mb-3 fw-semibold">Donar libros es muy simple.</p>
+            <p class="text-muted small lh-lg">
+                Primero completá tus datos personales y luego cargá la información de los libros que querés donar. Podés
+                incluir el título, autor, estado del libro y una imagen de referencia.
+            </p>
+            <p class="text-muted small lh-lg">
+                Una vez enviada la solicitud, nuestro equipo revisará la información y se pondrá en contacto para
+                coordinar la entrega o el retiro de los ejemplares.
+            </p>
+            <p class="text-muted small lh-lg mb-0">
+                Los libros donados serán destinados a lectores de la comunidad, bibliotecas, escuelas y espacios
+                educativos, ayudando a promover el acceso a la lectura y darle una nueva vida a cada libro.
+            </p>
+        </section>
+
+        <section class="card p-4 border-0 shadow-sm rounded mb-5 bg-white">
+            <h2 class="h4 fw-bold text-dark mb-4"><i class="bi bi-file-earmark-text-fill me-2"
+                    style="color: #0081A7;"></i>Formulario de Solicitud</h2>
+
+            <form id="formDonacion">
+
+                <h3 class="h6 fw-bold text-uppercase text-secondary tracking-wide mb-3 border-bottom pb-2">Información
+                    del Libro</h3>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="tituloLibro" class="form-label small fw-semibold text-dark">Título del libro</label>
+                        <input type="text" class="form-control" id="tituloLibro" required placeholder="Ej: Rayuela">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="autorLibro" class="form-label small fw-semibold text-dark">Autor</label>
+                        <input type="text" class="form-control" id="autorLibro" required
+                            placeholder="Ej: Julio Cortázar">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="tipoLibro" class="form-label small fw-semibold text-dark">Tipo de libro</label>
+                        <select class="form-select" id="tipoLibro" required>
+                            <option value="" selected disabled>Seleccioná una categoría...</option>
+                            <option value="estudio">Libro de Estudio / Académico</option>
+                            <option value="literatura">Literatura (Novela, Poesía, Cuentos)</option>
+                            <option value="divulgacion">Divulgación Científica / Ensayos</option>
+                            <option value="infantil">Infantil / Juvenil</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fechaPublicacion" class="form-label small fw-semibold text-dark">Fecha de
+                            publicación</label>
+                        <input type="date" class="form-control" id="fechaPublicacion">
+                    </div>
+                    <div class="col-12">
+                        <label for="editorialLibro" class="form-label small fw-semibold text-dark">Editorial</label>
+                        <input type="text" class="form-control" id="editorialLibro"
+                            placeholder="Ej: Editorial Sudamericana">
+                    </div>
+                </div>
+
+                <h3 class="h6 fw-bold text-uppercase text-secondary tracking-wide mb-3 border-bottom pb-2">Estado y
+                    disponibilidad</h3>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="estadoLibro" class="form-label small fw-semibold text-dark">Estado del libro</label>
+                        <select class="form-select" id="estadoLibro" required>
+                            <option value="" selected disabled>Seleccioná el estado...</option>
+                            <option value="nuevo">Libro Nuevo</option>
+                            <option value="usado">Libro Usado (Buen estado)</option>
+                            <option value="desgastado">Libro Usado (Con detalles/marcas)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cantidadLibro" class="form-label small fw-semibold text-dark">Cantidad de
+                            ejemplares</label>
+                        <select class="form-select" id="cantidadLibro" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h3 class="h6 fw-bold text-uppercase text-secondary tracking-wide mb-3 border-bottom pb-2">Información
+                    adicional</h3>
+
+                <div class="row g-3 mb-5">
+                    <div class="col-12">
+                        <label for="descripcionLibro" class="form-label small fw-semibold text-dark">Descripción o
+                            detalles del estado</label>
+                        <textarea class="form-control" id="descripcionLibro" rows="3"
+                            placeholder="Contanos brevemente si tiene dedicatorias, hojas subrayadas o algún detalle en particular..."></textarea>
+                    </div>
+                    <div class="col-12">
+                        <label for="fotoLibro" class="form-label small fw-semibold text-dark">Imagen de referencia (Foto
+                            del libro)</label>
+                        <input class="form-control" type="file" id="fotoLibro" accept="image/*">
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-end gap-3 border-top pt-4">
+                    <button type="button" id="btnAgregarOtro" class="btn btn-outline-secondary px-4 fw-semibold">
+                        <i class="bi bi-plus-circle me-2"></i>Agregar otro libro
+                    </button>
+                    <button type="submit" class="btn text-white px-4 fw-bold shadow-sm"
+                        style="background-color: #F07167;">
+                        <i class="bi bi-send me-2"></i>Enviar Formulario
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="text-white py-5">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                <div class="col-md-4">
+                        <h5 class="text-white mb-3 fw-bold d-flex align-items-center justify-content-center justify-content-md-start">
+                            <img src="img/icon/icon.png" alt="Logo Tinta Compartida" class="me-2" style="width: 30px; height: auto;">
+                        Tinta Compartida
+                        </h5>
+                    <p class="small text-white-50">Comunidad sustentable nacida en la UTN para promover la lectura
+                        circular.</p>
+                    <div class="fs-4 mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3 fw-bold">Información</h5>
+                    <ul class="list-unstyled small row row-cols-2 g-2">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Quiénes Somos</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Ayuda</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3 fw-bold">Novedades</h5>
+                    <p class="small text-white-50">Suscribite para recibir las últimas novedades.</p>
+                    <form class="input-group input-group-sm mt-3">
+                        <input type="email" class="form-control" placeholder="Tu email...">
+                        <button class="btn btn-light fw-bold text-dark" type="button">Unirme</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="text-center small opacity-50 mb-0">&copy; 2026 Tinta Compartida - UTN. Todos los derechos
+                reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

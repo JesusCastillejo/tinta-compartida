@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Tinta Compartida</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="w-100 py-2 text-center text-white text-uppercase small font-monospace"
+        style="background-color: #0081A7;">
+        <span>🚚 Envío gratis para compras mayores a $25.000 pesos</span>
+    </div>
+
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container" aria-label="Menú principal">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/icon/icon.png" alt="Logo Tinta Compartida" class="me-2" style="width: 40px; height: auto;">
+                    <span class="fw-bold text-dark">Tinta Compartida</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal"
+                    aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse py-3 px-2" id="navbarPrincipal">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Tienda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Intercambio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="donaciones.html">Donaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="club-lectura.html">Club de Lectura</a></li>
+                    </ul>
+
+                    <form class="d-flex me-3" role="search">
+                        <div class="input-group">
+                            <label for="buscarLibroNavbar" class="visually-hidden">Buscar libros</label>
+                            <input id="buscarLibroNavbar" name="buscarLibro" class="form-control" type="search"
+                                placeholder="Buscar libros..." aria-label="Buscar">
+                            <button class="btn text-white" type="submit" style="background-color: #0081A7;"><i
+                                    class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-3" style="color: #0081A7;"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end text-small" aria-labelledby="dropdownUser">
+                            <li><a class="dropdown-item" href="#">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="carouselBienvenida" class="carousel slide mb-5 shadow-sm" data-bs-ride="carousel" data-bs-interval="8000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselBienvenida" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselBienvenida" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselBienvenida" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="8000"
+                style="background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('img/image/IBilioteca.jpg') center/cover; height: 380px;">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="text-white max-w-md px-3 px-sm-0">
+                        <span class="badge text-uppercase font-monospace mb-2"
+                            style="background-color: #0081A7;">Comunidad UTN</span>
+                        <h1 class="display-6 fw-bold mb-2">Bienvenidos a Tinta Compartida</h1>
+                        <p class="lead small mb-4">Tu plataforma de economía circular literaria. Cambiá, doná y encontrá
+                            tus próximas lecturas.</p>
+                        <a href="#tienda" class="btn text-white fw-bold px-4"
+                            style="background-color: #F07167;">Explorar Tienda</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="8000"
+                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/image/iutnbuenosaires.jpg') center/cover; height: 380px;">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="text-white max-w-md px-3 px-sm-0">
+                        <span class="badge bg-warning text-dark text-uppercase font-monospace mb-2"><i
+                                class="bi bi-calendar-event me-1"></i> Próximo Evento</span>
+                        <h2 class="h1 fw-bold mb-2">Juntada Presencial: Especial Sci-Fi</h2>
+                        <p class="small mb-3">Nos reunimos a debatir clásicos de ciencia ficción y literatura
+                            fantástica.</p>
+                        <div class="small opacity-90 mb-4 font-monospace">
+                            <i class="bi bi-geo-alt-fill text-warning"></i> Biblioteca Central UTN (Medrano) | <i
+                                class="bi bi-clock-fill text-warning"></i> Sábado 11 de Julio - 18:30 hs
+                        </div>
+                        <a href="club-lectura.html" class="btn btn-light fw-bold px-4 text-dark">Anotarme al Club</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="8000"
+                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/image/ilibros.jpg') center/cover; height: 380px;">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="text-white max-w-md px-3 px-sm-0">
+                        <span class="badge bg-success text-uppercase font-monospace mb-2"><i
+                                class="bi bi-heart-fill me-1"></i> Colecta Solidaria</span>
+                        <h2 class="h1 fw-bold mb-2">Colecta de Libros Escolares</h2>
+                        <p class="small mb-3">Ayudanos a armar la biblioteca de la Escuela Primaria N°14. Buscamos
+                            manuales, diccionarios y cuentos infantiles.</p>
+                        <div class="small opacity-90 mb-4 font-monospace">
+                            <i class="bi bi-geo-alt-fill text-success"></i> Punto de Recepción: Campus UTN (Mozart) | <i
+                                class="bi bi-calendar-check text-success"></i> Todo el mes de Julio
+                        </div>
+                        <a href="donaciones.html" class="btn text-white fw-bold px-4"
+                            style="background-color: #00AFB9;">¿Cómo Donar?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev d-none d-sm-flex" type="button" data-bs-target="#carouselBienvenida"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next d-none d-sm-flex" type="button" data-bs-target="#carouselBienvenida"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <main id="tienda" class="container py-2">
+
+        <section class="mb-5" aria-label="Accesos rápidos de la comunidad">
+            <div class="row g-3 text-start text-md-center">
+                <div class="col-12 col-md-4">
+                    <div
+                        class="tarjeta-libro bg-azul p-3 p-md-4 d-flex d-md-block align-items-center rounded shadow-sm">
+                        <div class="me-3 mb-md-2 text-white fs-3 d-md-none"><i class="bi bi-arrow-left-right"></i></div>
+                        <div>
+                            <h2 class="h5 text-white mb-1 mb-md-2">Intercambio Inmediato</h2>
+                            <p class="small opacity-90 d-none d-md-block">Entregá un libro que ya leíste y llevate otro
+                                de la comunidad en el acto.</p>
+                            <a href="#" class="btn btn-light btn-sm mt-1 mt-md-2 fw-semibold text-dark">Explorar
+                                Catálogo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div
+                        class="tarjeta-libro bg-coral p-3 p-md-4 d-flex d-md-block align-items-center rounded shadow-sm">
+                        <div class="me-3 mb-md-2 text-white fs-3 d-md-none"><i class="bi bi-people"></i></div>
+                        <div>
+                            <h2 class="h5 text-white mb-1 mb-md-2">Clubes de Lectura</h2>
+                            <p class="small opacity-90 d-none d-md-block">Sumate a los debates grupales y compartí
+                                opiniones con otros estudiantes.</p>
+                            <a href="club-lectura.html"
+                                class="btn btn-light btn-sm mt-1 mt-md-2 fw-semibold text-dark">Ver Clubes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div
+                        class="tarjeta-libro bg-turquesa p-3 p-md-4 d-flex d-md-block align-items-center rounded shadow-sm">
+                        <div class="me-3 mb-md-2 text-white fs-3 d-md-none"><i class="bi bi-heart"></i></div>
+                        <div>
+                            <h2 class="h5 text-white mb-1 mb-md-2">Donación Directa</h2>
+                            <p class="small opacity-90 d-none d-md-block">¿Te sobran manuales o novelas? Dejalos acá
+                                para darles un destino educativo.</p>
+                            <a href="donaciones.html"
+                                class="btn btn-light btn-sm mt-1 mt-md-2 fw-semibold text-dark">Donar Ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5 opacity-25">
+
+        <section class="mb-5">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="d-flex align-items-center">
+                    <div
+                        style="width: 5px; height: 28px; background-color: #F07167; margin-right: 12px; border-radius: 2px;">
+                    </div>
+                    <h2 class="h4 fw-bold text-dark mb-0">Destacados en Romance</h2>
+                </div>
+                <a href="#" class="text-decoration-none small fw-bold" style="color: #F07167;">Ver más <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="row row-cols-md-4 g-4 text-start d-none d-md-flex">
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-white">
+                        <img src="img/image/LOrgulloyPrejuicio.jpg" class="card-img-top object-fit-cover"
+                            alt="Orgullo y Prejuicio" title="Orgullo y Prejuicio" style="height: 240px;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h6 fw-bold text-dark mb-1 text-truncate">Orgullo y Prejuicio</h3>
+                            <p class="text-muted card-text small mb-2 flex-grow-1"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                El clásico dilema entre el amor, el orgullo social y los malentendidos.</p>
+                            <a href="#" class="btn btn-sm w-100 text-white fw-semibold"
+                                style="background-color: #0081A7;">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-white">
+                        <img src="img/image/LBajolamisma.jpg" class="card-img-top object-fit-cover"
+                            alt="Bajo la misma estrella" title="Bajo la misma estrella" style="height: 240px;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h6 fw-bold text-dark mb-1 text-truncate">Bajo la misma estrella</h3>
+                            <p class="text-muted card-text small mb-2 flex-grow-1"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                Una emotiva historia de amor juvenil que desafía al destino.</p>
+                            <a href="#" class="btn btn-sm w-100 text-white fw-semibold"
+                                style="background-color: #0081A7;">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-white">
+                        <img src="img/image/LLoqueelviento.jpg" class="card-img-top object-fit-cover"
+                            alt="Lo que el viento se llevó" title="Lo que el viento se llevo" style="height: 240px;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h6 fw-bold text-dark mb-1 text-truncate">Lo que el viento se llevó</h3>
+                            <p class="text-muted card-text small mb-2 flex-grow-1"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                Pasión y supervivencia en medio de la guerra civil estadounidense.</p>
+                            <a href="#" class="btn btn-sm w-100 text-white fw-semibold"
+                                style="background-color: #0081A7;">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-white">
+                        <img src="img/image/LCumbresBorrascosas.jpg" class="card-img-top object-fit-cover"
+                            alt="Cumbres Borrascosas" title="Cumbres Borrascosas" style="height: 240px;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h6 fw-bold text-dark mb-1 text-truncate">Cumbres Borrascosas</h3>
+                            <p class="text-muted card-text small mb-2 flex-grow-1"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                Una intensa y oscura historia de amor, venganza y pasión en los páramos.</p>
+                            <a href="#" class="btn btn-sm w-100 text-white fw-semibold"
+                                style="background-color: #0081A7;">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div id="carouselRomanceMobile" class="carousel slide d-md-none shadow-sm rounded bg-white p-3 text-center"
+                data-bs-ride="carousel" data-bs-interval="8000">
+                <div class="carousel-inner">
+                    <article class="carousel-item active">
+                        <img src="img/image/LOrgulloyPrejuicio.jpg" class="rounded shadow-sm mb-3 object-fit-cover"
+                            alt="Orgullo y Prejuicio" title="Orgullo y Prejuicio" style="height: 220px; width: 150px;">
+                        <h3 class="h6 fw-bold text-dark mb-1">Orgullo y Prejuicio</h3>
+                        <p class="text-muted small px-3 mb-3">El clásico dilema entre el amor y el orgullo social.</p>
+                        <div class="px-4"><a href="#" class="btn btn-sm w-100 text-white fw-semibold mb-2"
+                                style="background-color: #0081A7;">Comprar</a></div>
+                    </article>
+                    <article class="carousel-item">
+                        <img src="img/image/LBajolamisma.jpg" class="rounded shadow-sm mb-3 object-fit-cover"
+                            alt="Bajo la misma estrella" title="Bajo de la misma estrella" style="height: 220px; width: 150px;">
+                        <h3 class="h6 fw-bold text-dark mb-1">Bajo la misma estrella</h3>
+                        <p class="text-muted small px-3 mb-3">Una emotiva historia de amor juvenil que desafía al
+                            destino.</p>
+                        <div class="px-4"><a href="#" class="btn btn-sm w-100 text-white fw-semibold mb-2"
+                                style="background-color: #0081A7;">Comprar</a></div>
+                    </article>
+                    <article class="carousel-item">
+                        <img src="img/image/LLoqueelviento.jpg" class="rounded shadow-sm mb-3 object-fit-cover"
+                            alt="Lo que el viento se llevó" title="Bajo la misma estrella" style="height: 220px; width: 150px;">
+                        <h3 class="h6 fw-bold text-dark mb-1">Lo que el viento se llevó</h3>
+                        <p class="text-muted small px-3 mb-3">Pasión y supervivencia en medio de la guerra civil
+                            estadounidense.</p>
+                        <div class="px-4"><a href="#" class="btn btn-sm w-100 text-white fw-semibold mb-2"
+                                style="background-color: #0081A7;">Comprar</a></div>
+                    </article>
+                    <article class="carousel-item">
+                        <img src="img/image/LCumbresBorrascosas.jpg" class="rounded shadow-sm mb-3 object-fit-cover"
+                            alt="Cumbres Borrascosas" title="Cumbres Borrascosas" style="height: 220px; width: 150px;">
+                        <h3 class="h6 fw-bold text-dark mb-1">Cumbres Borrascosas</h3>
+                        <p class="text-muted small px-3 mb-3">Una intensa y oscura historia de amor y venganza.</p>
+                        <div class="px-4"><a href="#" class="btn btn-sm w-100 text-white fw-semibold mb-2"
+                                style="background-color: #0081A7;">Comprar</a></div>
+                    </article>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselRomanceMobile"
+                    data-bs-slide="prev" style="filter: invert(1);">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselRomanceMobile"
+                    data-bs-slide="next" style="filter: invert(1);">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <hr class="my-5 opacity-25">
+
+        <section class="mb-5">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="d-flex align-items-center">
+                    <div
+                        style="width: 5px; height: 28px; background-color: #00AFB9; margin-right: 12px; border-radius: 2px;">
+                    </div>
+                    <h2 class="h4 fw-bold text-dark mb-0">Grandes Clásicos</h2>
+                </div>
+                <a href="#" class="text-decoration-none small fw-bold" style="color: #00AFB9;">Ver más <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="row row-cols-md-4 g-4 text-start d-none d-md-flex">
+
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-white">
+                        <img src="img/image/LEleternauta.webp" class="card-img-top object-fit-cover" alt="El Eternauta" title="El Eternauta"
+                            style="height: 240px;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h6 fw-bold text-dark mb-1 text-truncate">El Eternauta</h3>
+                            <p class="text-muted card-text small mb-2 flex-grow-1"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                La mítica historieta argentina de ciencia ficción e invasión alienígena.</p>
+                            <a href="#" class="btn btn-sm w-100 text-white fw-semibold"
+                                style="background-color: #0081A7;">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-white">
+                        <img src="img/image/LElprincipito.jpg" class="card-img-top object-fit-cover" alt="El Principito" title="El Principito"
+                            style="height: 240px;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h6 fw-bold text-dark mb-1 text-truncate">El Principito</h3>
+                            <p class="text-muted card-text small mb-2 flex-grow-1"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                Una hermosa e inolvidable lección de vida, amistad y amor esencial.</p>
+                            <a href="#" class="btn btn-sm w-100 text-white fw-semibold"
+                                style="background-color: #0081A7;">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-white">
+                        <img src="img/image/LRayuela.webp" class="card-img-top object-fit-cover" alt="Rayuela" title="Rayuela"
+                            style="height: 240px;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h6 fw-bold text-dark mb-1 text-truncate">Rayuela</h3>
+                            <p class="text-muted card-text small mb-2 flex-grow-1"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                La obra maestra de Julio Cortázar que revolucionó la forma de leer.</p>
+                            <a href="#" class="btn btn-sm w-100 text-white fw-semibold"
+                                style="background-color: #0081A7;">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col">
+                    <div class="card h-100 border-0 shadow-sm bg-white">
+                        <img src="img/image/LFicciones.webp" class="card-img-top object-fit-cover" alt="Ficciones" title="Ficciones"
+                            style="height: 240px;">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h6 fw-bold text-dark mb-1 text-truncate">Ficciones</h3>
+                            <p class="text-muted card-text small mb-2 flex-grow-1"
+                                style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                                Laberintos, espejos y relatos filosóficos del gran Jorge Luis Borges.</p>
+                            <a href="#" class="btn btn-sm w-100 text-white fw-semibold"
+                                style="background-color: #0081A7;">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div id="carouselClasicosMobile" class="carousel slide d-md-none shadow-sm rounded bg-white p-3 text-center"
+                data-bs-ride="carousel" data-bs-interval="8000">
+                <div class="carousel-inner">
+                    <article class="carousel-item active">
+                        <img src="img/image/LEleternauta.webp" class="rounded shadow-sm mb-3 object-fit-cover"
+                            alt="El Eternauta" title="El Eternauta" style="height: 220px; width: 150px;">
+                        <h3 class="h6 fw-bold text-dark mb-1">El Eternauta</h3>
+                        <p class="text-muted small px-3 mb-3">La mítica historieta argentina de ciencia ficción.</p>
+                        <div class="px-4"><a href="#" class="btn btn-sm w-100 text-white fw-semibold mb-2"
+                                style="background-color: #0081A7;">Comprar</a></div>
+                    </article>
+                    <article class="carousel-item">
+                        <img src="img/image/LElprincipito.jpg" class="rounded shadow-sm mb-3 object-fit-cover"
+                            alt="El Principito" title="El Principito" style="height: 220px; width: 150px;">
+                        <h3 class="h6 fw-bold text-dark mb-1">El Principito</h3>
+                        <p class="text-muted small px-3 mb-3">Una hermosa lección de vida, amistad y amor esencial.</p>
+                        <div class="px-4"><a href="#" class="btn btn-sm w-100 text-white fw-semibold mb-2"
+                                style="background-color: #0081A7;">Comprar</a></div>
+                    </article>
+                    <article class="carousel-item">
+                        <img src="img/image/LRayuela.webp" class="rounded shadow-sm mb-3 object-fit-cover" alt="Rayuela" title="Rayuela"
+                            style="height: 220px; width: 150px;">
+                        <h3 class="h6 fw-bold text-dark mb-1">Rayuela</h3>
+                        <p class="text-muted small px-3 mb-3">La obra maestra de Cortázar que revolucionó la literatura.
+                        </p>
+                        <div class="px-4"><a href="#" class="btn btn-sm w-100 text-white fw-semibold mb-2"
+                                style="background-color: #0081A7;">Comprar</a></div>
+                    </article>
+                    <article class="carousel-item">
+                        <img src="img/image/LFicciones.webp" class="rounded shadow-sm mb-3 object-fit-cover"
+                            alt="Ficciones" title="Ficciones" style="height: 220px; width: 150px;">
+                        <h3 class="h6 fw-bold text-dark mb-1">Ficciones</h3>
+                        <p class="text-muted small px-3 mb-3">Laberintos y relatos filosóficos memorables de Borges.</p>
+                        <div class="px-4"><a href="#" class="btn btn-sm w-100 text-white fw-semibold mb-2"
+                                style="background-color: #0081A7;">Comprar</a></div>
+                    </article>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselClasicosMobile"
+                    data-bs-slide="prev" style="filter: invert(1);">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselClasicosMobile"
+                    data-bs-slide="next" style="filter: invert(1);">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <hr class="my-5 opacity-25">
+
+        <section class="mb-5 py-2">
+            <div class="d-flex align-items-center mb-4">
+                <div
+                    style="width: 5px; height: 28px; background-color: #0081A7; margin-right: 12px; border-radius: 2px;">
+                </div>
+                <h2 class="h4 fw-bold text-dark mb-0">Te puede interesar</h2>
+            </div>
+
+            <div class="row g-4">
+                <article class="col-12 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm p-3 bg-white">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4 col-sm-3 text-center">
+                                <img src="img/image/LPozoCiego.jpg" class="img-fluid rounded shadow-sm" alt="Pozo Ciego" title="Pozo Ciego"
+                                    style="max-height: 140px; object-fit: cover;">
+                            </div>
+                            <div class="col-8 col-sm-9 ps-3">
+                                <div class="card-body p-0">
+                                    <span
+                                        class="badge text-uppercase font-monospace mb-1 px-2 py-1 bg-light text-secondary small"
+                                        style="font-size: 0.75rem;"><i
+                                            class="bi bi-graph-up-arrow me-1 text-danger"></i> El más buscado de la
+                                        semana</span>
+                                    <h3 class="h6 fw-bold text-dark mb-1 mt-1">Pozo Ciego</h3>
+                                    <p class="text-muted mb-2 card-text" style="font-size: 0.85rem;">Novela gráfica /
+                                        Thriller</p>
+                                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                        <span class="text-muted small fw-semibold"><i
+                                                class="bi bi-star-fill text-warning"></i> Recomendado</span>
+                                        <a href="#" class="btn btn-sm text-white px-3 fw-semibold"
+                                            style="background-color: #0081A7; font-size: 0.8rem;">Ver detalle</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-12 col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm p-3 bg-white">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-4 col-sm-3 text-center">
+                                <div class="rounded d-flex align-items-center justify-content-center text-white shadow-sm"
+                                    style="background-color: #F07167; width: 100%; aspect-ratio: 1/1; max-width: 90px; margin: 0 auto;">
+                                    <img src="img/image/Cclub10.avif" alt="Club de Ciberpunk" title="Club Ciberpunk"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            </div>
+                            <div class="col-8 col-sm-9 ps-3">
+                                <div class="card-body p-0">
+                                    <span
+                                        class="badge text-uppercase font-monospace mb-1 px-2 py-1 bg-light text-secondary small"
+                                        style="font-size: 0.75rem;"><i class="bi bi-eye-fill me-1 text-primary"></i> Más
+                                        solicitado por estudiantes</span>
+                                    <h3 class="h6 fw-bold text-dark mb-1 mt-1">Club de Ciberpunk y Distopías</h3>
+                                    <p class="text-muted mb-2 card-text small"
+                                        style="font-size: 0.8rem; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;">
+                                        Análisis de Blade Runner, Neuromante y el impacto tecnológico actual.</p>
+                                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                        <span class="text-muted small fw-semibold"><i
+                                                class="bi bi-people-fill me-1 text-secondary"></i> 48 Miembros</span>
+                                        <a href="club-lectura.html" class="btn btn-sm text-white px-3 fw-semibold"
+                                            style="background-color: #F07167; font-size: 0.8rem;">Explorar Club</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-white py-5">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                <div class="col-md-4">
+                        <h5 class="text-white mb-3 fw-bold d-flex align-items-center justify-content-center justify-content-md-start">
+                            <img src="img/icon/icon.png" alt="Logo Tinta Compartida" class="me-2" style="width: 30px; height: auto;">
+                        Tinta Compartida
+                    </h5>
+                    <p class="small text-white-50">Comunidad sustentable nacida en la UTN para promover la lectura
+                        circular.</p>
+                    <div class="fs-4 mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3 fw-bold">Información</h5>
+                    <ul class="list-unstyled small row row-cols-2 g-2">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Quiénes Somos</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Ayuda</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3 fw-bold">Novedades</h5>
+                    <p class="small text-white-50">Suscribite para recibir las últimas novedades.</p>
+                    <form class="input-group input-group-sm mt-3">
+                        <input type="email" class="form-control" placeholder="Tu email...">
+                        <button class="btn btn-light fw-bold text-dark" type="button">Unirme</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <p class="text-center small opacity-50 mb-0">&copy; 2026 Tinta Compartida - UTN. Todos los derechos
+                reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
