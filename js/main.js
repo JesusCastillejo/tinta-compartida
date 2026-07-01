@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // --- 1. CAPTURA DE EVENTOS: CLUB DE LECTURA ---
     const botonesUnirse = document.querySelectorAll('.btn-unirse');
     botonesUnirse.forEach(boton => {
         boton.addEventListener('click', function () {
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // --- 2. CAPTURA DE EVENTOS: FORMULARIO DE DONACIONES (MEJORADO) ---
     const formDonacion = document.getElementById('formDonacion');
     const btnAgregarOtro = document.getElementById('btnAgregarOtro');
 
@@ -26,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const titulo = document.getElementById('tituloLibro').value;
             const tipo = document.getElementById('tipoLibro').value;
 
-            // Validaciones mejoradas
             if (titulo.length < 3) {
                 alert('Por favor, ingresá un título válido (mínimo 3 caracteres).');
                 return;
@@ -36,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // Simulación de envío
             console.log('Procesando donación:', titulo);
             alert(`¡Gracias! La solicitud para "${titulo}" fue registrada. Te contactaremos pronto.`);
             
@@ -53,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // --- 3. MOTOR DE FILTRADO AVANZADO (MANTENIDO) ---
     const btnFiltrar = document.getElementById("btnAplicarFiltros");
     const clubes = document.querySelectorAll(".tarjeta-club-item");
     const alertaNoResultados = document.getElementById("alertaNoResultados");
